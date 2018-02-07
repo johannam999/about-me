@@ -1,3 +1,24 @@
-* {
-    color:blue;
+body {color:rgb(6, 4, 54);
+    font-family: 'Gill Sans MT', Garamond, 'Trebuchet MS', sans-serif;
+background-image: url('img/background.jpg');
+ }
+ img {display:block;
+      margin:20px;
+      width:30%;
+     float: left;;
+    border:5px}
+
+span {
+    font-weight:bold;
+    font-size: 20px;
 }
+h1{ margin:20px;
+    padding:40px;
+    text-align:center;
+}
+h2{
+    margin:25px;
+    font-size:20px;
+    text-transform:uppercase;
+}
+p{}

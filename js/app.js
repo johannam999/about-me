@@ -67,7 +67,7 @@ if (answer6 === myAnswer) {
 
 } else {
 
-  for(var i = 0; i <= 4; i++) {
+  for(var i = 0; i < 3; i++) {
     if (answer6 === myAnswer){
       answer6 = parseInt(alert('Yaay! Correct answer! I lived in 4 countries so far.'));
       break;
@@ -75,14 +75,15 @@ if (answer6 === myAnswer) {
       answer6 = parseInt(prompt('The number is too big. Try again.'));
     } else if (answer6 < myAnswer) {
       answer6 = parseInt(prompt('The number is too small. Try again.'));
-    //} else if (i === 3) {
-      //alert('You missed your chance. The correct answer i I lived in 4 countries.');
-      //break;
+    } else if (i === 2) {
+      
+      break;
     } else {
       answer6 = parseInt(prompt(' Is that a typo? Try again.'));
     }
 
   }
+  alert('You missed your chance. The correct answer i I lived in 4 countries.');
 }
 console.log ('User answered that I lived in: ' + answer6 + ' countries.');
 

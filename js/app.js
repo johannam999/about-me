@@ -93,13 +93,13 @@ function question6() {
         answer6 = parseInt(prompt('The number is too big. Try again.'));
       } else if (answer6 < myAnswer) {
         answer6 = parseInt(prompt('The number is too small. Try again.'));
-      
+
       } else {
         answer6 = parseInt(prompt(' Is that a typo? Try again.'));
       }
-    
+
     }
-    
+
   }
   console.log ('User answered that I lived in: ' + answer6 + ' countries.');
 }

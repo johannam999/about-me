@@ -1,5 +1,5 @@
 'use strict';
-var totalCorrect = 0;
+/*var totalCorrect = 0;
 
 var username = prompt('Hi good to see you! What is your name?');
 alert( 'Hi '+ username + ' how is your day? I am going to ask you few question about me. Please answer with yes/no or y/n. Let\'s start.');
@@ -13,7 +13,7 @@ function question1() {
   } else if (answer1 === 'no' || answer1 ==='n'){
     alert('Thats a wrong answer, ' + username + '. I love pets. I used to have a rabbit!');
   } else {
-    alert('Sorry that was not a valid answer. Lets move on to the next question.');
+    alert('Sorry, that was not a valid answer. Lets move on to the next question.');
   }
   console.log ('User was asked to answer question whether I like pets and answered: ' + answer1);
 }
@@ -76,30 +76,24 @@ function question5() {
 question5();
 
 function question6() {
+  
   var myAnswer = 4;
   var answer6 = parseInt(prompt('Can you guess how many countries I have lived in?'));
-  if (answer6 === myAnswer) {
-    alert('Correct answer!');
-
-  } else {
-
-    for(var i = 0; i < 4; i++) {
-      if (answer6 === myAnswer){
-        answer6 = parseInt(alert('Yaay! Correct answer! I lived in 4 countries so far.'));
-        break;
-      } else if (i === 3) {
-        alert('You missed your chance. The correct answer i I lived in 4 countries.');
-      } else if (answer6 > myAnswer) {
-        answer6 = parseInt(prompt('The number is too big. Try again.'));
-      } else if (answer6 < myAnswer) {
-        answer6 = parseInt(prompt('The number is too small. Try again.'));
-
-      } else {
-        answer6 = parseInt(prompt(' Is that a typo? Try again.'));
-      }
-
+  for(var i = 0; i < 4; i++) {
+    if (answer6 === myAnswer){
+      answer6 = parseInt(alert('Yaay! Correct answer! I lived in 4 countries so far.'));
+      break;
+    } else if (i === 3) {
+      alert('You missed your chance. The correct answer i I lived in 4 countries.');
+    } else if (answer6 > myAnswer) {
+      answer6 = parseInt(prompt('The number is too big. Try again.'));
+    } else if (answer6 < myAnswer) {
+      answer6 = parseInt(prompt('The number is too small. Try again.'));
+    } else if (answer6 === '' || parseInt(answer6) === NaN)
+      answer6 = parseInt('Was that a typo, ' + username +'? Try again.');
+    else {
+      answer6 = parseInt(prompt(' Is that a typo? Try again.'));
     }
-
   }
   console.log ('User answered that I lived in: ' + answer6 + ' countries.');
 }
@@ -120,14 +114,14 @@ function question7() {
         break;
       }
     }
-
     if (correct) {
       break;
     } else if (j === 5) {
-      alert('You missed your chance!The right answer is I lived in Poland, Ireland and USA. ');
+      alert('You missed your chance! The right answer is I lived in Poland, Ireland and USA. ');
       break;
-
-    }	else {
+    }	else if (answer7 === '' || !isNaN(parseInt(answer7))) {
+      answer7 = parseInt(prompt('Seems like a typo, ' + username +' can you verify your answer?'));
+    } else {
       answer7 = prompt('The answer was wrong. Try again!').toLowerCase().trim();
     }
   }

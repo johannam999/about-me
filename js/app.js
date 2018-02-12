@@ -1,5 +1,5 @@
 'use strict';
-/*var totalCorrect = 0;
+var totalCorrect = 0;
 
 var username = prompt('Hi good to see you! What is your name?');
 alert( 'Hi '+ username + ' how is your day? I am going to ask you few question about me. Please answer with yes/no or y/n. Let\'s start.');
@@ -101,7 +101,7 @@ question6();
 
 function question7() {
   var country = ['poland', 'ireland', 'usa'];
-  var answer7 = prompt('What are the countries I lived in?').toLowerCase().trim();
+  var answer7 = prompt('Guess one of the countries I lived in?').toLowerCase().trim();
 
 
   for (var j = 0; j < 6; j++) { //running loop 6 times asking for answer

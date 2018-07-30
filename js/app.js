@@ -36,10 +36,10 @@ question2();
 function question3() {
   var answer3= prompt('Can you quess whether I like travelling?').toLowerCase().trim();
   if (answer3 === 'yes' || answer3 === 'y'){
-    alert('Yaay! I love travelling ' + username + '! I have visitied most of Europe, part of Asia and USA so far.');
+    alert('Yaay! I love travelling ' + username + '! I have visited most of Europe, part of Asia and USA so far.');
     totalCorrect++;
   } else if (answer3 ==='no' || answer3 === 'n'){
-    alert('Wrong! I do love travelling ' + username + '! I have visitied most of Europe, part of Asia and USA.');
+    alert('Wrong! I do love travelling ' + username + '! I have visited most of Europe, part of Asia and USA.');
   } else {
     alert(username + ', stick to the plan!');
   }
@@ -71,7 +71,7 @@ function question5() {
   } else{
     alert('Was that a typo, ' + username +'?');
   }
-  console.log ('User was asked whether I go to pilates regularily and answered: ' + answer5);
+  console.log ('User was asked whether I go to pilates regularly and answered: ' + answer5);
 }
 question5();
 
@@ -104,9 +104,9 @@ function question7() {
   var answer7 = prompt('Guess one of the countries I lived in?').toLowerCase().trim();
 
 
-  for (var j = 0; j < 6; j++) { //running loop 6 times asking for answer
+  for (var j = 0; j < 6; j++) { // running loop 6 times asking for answer
     var correct = false;
-    for (var k = 0; k < country.length; k++) {// interating through countries
+    for (var k = 0; k < country.length; k++) {// iterating through countries
       if (answer7 === country[k]) {
         alert(' You are right! I lived in Poland, Ireland and USA.');
         totalCorrect++;
@@ -133,7 +133,7 @@ question7();
 if (totalCorrect > 3) {
   alert('Yaaay ' + username +', you answered ' + totalCorrect + ' out of 7 questions correct!');
 } else {
-  alert('You answered ' + totalCorrect + ' out of 7 guestions correct, '+ username + '. Try your luck again!');
+  alert('You answered ' + totalCorrect + ' out of 7 questions correct, '+ username + '. Try your luck again!');
 }
 
 
